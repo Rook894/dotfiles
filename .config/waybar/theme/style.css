@@ -1,0 +1,170 @@
+
+@define-color backgroundlight #FFFFFF;
+@define-color backgrounddark #FFFFFF;
+@define-color workspacesbackground1 #FFFFFF;
+@define-color workspacesbackground2 #CCCCCC;
+@define-color bordercolor #FFFFFF;
+@define-color textcolor1 #000000;
+@define-color textcolor2 #000000;
+@define-color textcolor3 #508C9B;
+@define-color iconcolor #F4EDE5;
+@define-color textcolor #F4EDE5;
+
+
+/* Split complementary */
+/* @define-color accentcolor1 #6B413E; */
+/* @define-color accentcolor2 #3d6b57; */
+/* @define-color accentcolor3 #3d516b; */
+
+/* Analogous */
+/* @define-color lighter-background #455E73; */
+@define-color lighter-background #314654;
+@define-color medium-background #1E2A33;
+@define-color accentcolor2 #6b573d;
+@define-color accentcolor3 #686b3d;
+/* -----------------------------------------------------
+ * General 
+ * ----------------------------------------------------- */
+
+* {
+    font-family: "Fira Sans semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    border: none;
+    border-radius: 0px;
+}
+
+window#waybar {
+    background-color: #1E2A33; 
+    border-bottom: 0px solid #ffffff;
+    margin: 0px;
+    /* color: #FFFFFF; */
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+/* -----------------------------------------------------
+ * Workspaces 
+ * ----------------------------------------------------- */
+
+#workspaces {
+    margin: 3px 7px 3px 3px;
+    color: @textcolor;
+}
+
+#workspaces button {
+    padding:0px 3px;
+    border-radius: 25%;
+    color: @textcolor;
+    transition: all 0.5s ease-in-out;
+}
+
+#workspaces button.active {
+    color: @textcolor;
+    background: @lighter-background;
+}
+
+
+/* -----------------------------------------------------
+ * Tooltips
+ * ----------------------------------------------------- */
+
+tooltip {
+    border-radius: 2px;
+    background-color: @medium-background;
+    opacity:0.8;
+    padding:20px;
+    margin:0px;
+}
+
+tooltip label {
+    color: @textcolor;
+}
+
+
+/* -----------------------------------------------------
+ * Modules
+ * ----------------------------------------------------- */
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+
+/* -----------------------------------------------------
+ * Pulseaudio
+ * ----------------------------------------------------- */
+
+#pulseaudio {
+    color: @textcolor;
+    border-radius: 15px;
+    margin: 0px 0px;
+}
+
+#pulseaudio.muted {
+    color: @textcolor;
+}
+
+
+/* -----------------------------------------------------
+ * Battery
+ * ----------------------------------------------------- */
+
+#battery {
+    color: @textcolor;
+    border-radius: 15px;
+    margin: 5px 10px;
+}
+
+#battery.charging, #battery.plugged {
+    color: @textcolor;
+}
+
+@keyframes blink {
+    to {
+        background-color: @backgroundlight;
+        color: @textcolor2;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: #f53c3c;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* -----------------------------------------------------
+ * Tray
+ * ----------------------------------------------------- */
+
+#tray {
+    /* background-color: @lighter-background; */
+    border-radius: 5px;
+    border: 0px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+/* -----------------------------------------------------
+ * Other
+ * ----------------------------------------------------- */
+
+#tray, #stats, #clock, #workspaces {
+    margin: 0px 4px;
+}
+
+#tray {
+    font-size: 2px;
+}
