@@ -64,6 +64,13 @@ final_space = true
     [blocks.segments.properties]
       cache_duration = 'none'
       threshold = 1000
+  
+  [[blocks.segments]]
+    template = '  {{ .HostName }}'
+    foreground = 'cyan'
+    background = 'transparent'
+    type = 'session'
+    style = 'plain'
 
 # Actual input prompt
 [[blocks]]
