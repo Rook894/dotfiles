@@ -16,43 +16,7 @@
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
 
-# Set personal aliases, overriding those provided by Oh My Zsh libs,
-# plugins, and themes. Aliases can be placed here, though Oh My Zsh
-# users are encouraged to define aliases within a top-level file in
-# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
-# - $ZSH_CUSTOM/aliases.zsh
-# - $ZSH_CUSTOM/macos.zsh
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias ls='lsd'
-alias ..='cd ..'
-alias rm='rm -i'
-alias sz='source ~/.zshrc'
-alias c='clear'
-alias ipconfig='ip addr show'
-alias cat='bat --paging=never --style=plain'
-
-alias gs='git status'
-alias ga='git add'
-alias gc='git commit'
-alias gca='git commit -am'
-alias gp='git push'
-alias gpl='git pull'
-alias gd='git diff'
-alias gb='git branch'
-alias gco='git checkout'
-
-alias py='python3'
-alias pipup='pip install --upgrade pip'
-alias mkenv='python3 -m venv venv'
-alias avenv='source venv/bin/activate'
-alias djrun='python manage.py runserver'
-alias djmigrate='python manage.py migrate'
-
+source $HOME/.config/zsh/aliases.zsh
 
 
 eval "$(zoxide init --cmd cd zsh)"
