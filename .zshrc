@@ -17,6 +17,7 @@
 # export ARCHFLAGS="-arch $(uname -m)"
 
 source $HOME/.config/zsh/aliases.zsh
+source $HOME/.config/zsh/history.zsh
 
 
 eval "$(zoxide init --cmd cd zsh)"
@@ -68,18 +69,6 @@ zinit snippet OMZP::command-not-found
 
 autoload -U compinit && compinit
 zinit cdreplay -q
-# History
-HISTSIZE=5000
-HISTFILE=~/.zsh_history
-SAVEHIST=$HISTSIZE
-HISTDUP=erase
-setopt appendhistory
-setopt sharehistory
-setopt hist_ignore_space
-setopt hist_ignore_all_dups
-setopt hist_save_no_dups
-setopt hist_ignore_dups
-setopt hist_find_no_dups
 
 # Styling
 zstyle ':completion:*' menu no
