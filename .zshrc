@@ -24,7 +24,7 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(fzf --zsh)"
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/base.toml)"
 
-# SSH keys
+# SSH keys for GNOME Keyring
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
 if [ -S "$SSH_AUTH_SOCK" ]; then
     ssh-add -A 2>/dev/null
@@ -75,13 +75,7 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
-function start_ssh_agent {
-    # Check if SSH agent is running
-    if [ -z "$SSH_AGENT_PID" ] || ! ps -p $SSH_AGENT_PID > /dev/null 2>&1; then
-        eval "$(ssh-agent -s)"
-        ssh-add ~/.ssh/github
-    fi
-}
+
 
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
