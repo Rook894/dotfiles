@@ -1,17 +1,21 @@
-console_title_template = '{{ .Shell }} in {{ .Folder }}'
+# This config handles the appearance of the shell
+
+# Global settings
+console_title_template = '{{ .Shell }} in {{ .Folder }}' # Window title
 version = 3
 final_space = true
 
+# Prompt for incomplete commands (e.g. multiline input, inside quotes)
 [secondary_prompt]
   template = '❯❯ '
   foreground = 'magenta'
   background = 'transparent'
 
-# Visual prompt after command execution
+# The previous command's prompt (Shown after the command is executed and it scrolls up.)
 [transient_prompt]
   template = '❯ '
   background = 'transparent'
-  foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}magenta{{end}}']
+  foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}magenta{{end}}'] # Turns red if command failed, turns magneta if it succeeded
 
 # Left half of the main prompt
 [[blocks]]
@@ -45,6 +49,7 @@ final_space = true
       commit_icon = '@'
       fetch_status = true
 
+# Right half of the main prompt
 [[blocks]]
   type = 'rprompt'
   overflow = 'hidden'
@@ -60,7 +65,7 @@ final_space = true
       cache_duration = 'none'
       threshold = 1000
 
-# Main prompt
+# Actual input prompt
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
