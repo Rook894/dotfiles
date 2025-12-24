@@ -48,6 +48,18 @@ final_space = true
       cache_duration = 'none'
       commit_icon = '@'
       fetch_status = true
+  
+  [[blocks.segments]]
+    template = '({{ .Venv }})'
+    foreground = 'yellow'
+    background = 'transparent'
+    type = 'python'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      fetch-virtual_env = true
+      display_default = false
+      cache_duration = 'none'
 
 # Right half of the main prompt
 [[blocks]]
