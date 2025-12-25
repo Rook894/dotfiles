@@ -27,7 +27,8 @@
  * ----------------------------------------------------- */
 
 * {
-    font-family: "Fira Sans semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    /* sudo pacman -Syu ttf-jetbrains-mono-nerd */
+    font-family: "JetBrainsMono Nerd Font", "FiraCode Nerd Font", "Meslo Nerd Font", sans-serif;
     color: @textcolor;
     border: none;
     border-radius: 0px;
