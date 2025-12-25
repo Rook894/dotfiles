@@ -92,7 +92,10 @@
     "disk": {
         "interval": 120,
         "format": "🖴 {percentage_used}% ",
-        "path": "/"
+        "path": "/",
+        "unit": "GB",
+        "tooltip": true,
+        "tooltip-format": "Disk usage:\n{path}\n{specific_used:0.2f} GB/{specific_total:0.2f}"
     },
     "memory": {
         "interval": 30,
