@@ -2,16 +2,11 @@
     // -- Groups ------------------------------------
     "group/hardware": {
         "orientation": "inherit",
-        "drawer": {
-            "transition-duration": 300,
-            "children-class": "not-memory",
-            "transition-left-to-right": false
-        },
         "modules": [
-            "custom/system",
+            "memory",
             "disk",
-            "cpu",
-            "memory"
+            "cpu"
+            
         ]
     },
     "group/stats": {
@@ -77,27 +72,34 @@
         ]
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "🔈  {volume}%",
-        "format-bluetooth": "🔈 {volume}% ",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "🔈 Mute",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": " ",
-            "hands-free": " ",
-            "headset": " ",
-            "phone": " ",
-            "portable": " ",
-            "car": " ",
-            "default": [
-                " ",
-                " ",
-                " "
-            ]
-        },
-        "on-click": "pavucontrol"
+    "format": "    {volume}%",
+    "format-bluetooth": "    {volume}%",
+    "format-muted": "    0%",
+    "format-source": "    {volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+        "default": [
+        "",  // low
+        "",  // mid
+        ""   // high
+        ]
+    },
+    "on-click": "pavucontrol"
+    },
+    "disk": {
+        "interval": 120,
+        "format": "🖴 {percentage_used}% ",
+        "path": "/"
+    },
+    "memory": {
+        "interval": 30,
+        "format": " {percentage}% ",
+        "max-length": 10
+    },
+    "cpu": {
+        "interval": 2,
+        "format": " {usage}%  ",
+        "max-length": 10
     },
 
     // -- Connectivity ------------------------------
