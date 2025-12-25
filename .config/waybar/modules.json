@@ -5,7 +5,8 @@
         "modules": [
             "memory",
             "disk",
-            "cpu"
+            "cpu",
+            "custom/separator"
             
         ]
     },
@@ -14,7 +15,9 @@
         "modules": [
             "pulseaudio",
             "battery", 
-            "hyprland/language"
+            "custom/separator",
+            "hyprland/language",
+            "custom/separator"
         ]
     },
 
@@ -34,7 +37,7 @@
         }
     },
     "hyprland/language": {
-        "format": "{}",
+        "format": " {}",
         "format-en": "🇬🇧",
         "format-ru": "🇷🇺"
     },
@@ -121,5 +124,11 @@
         "interval": 30,
         "on-click": "blueman-manager",
         "format-no-controller": ""
+    },
+    // -- Visual ------------------------------------
+    "custom/separator": {
+        "format": " ",
+        "tooltip": false
     }
+
 }
