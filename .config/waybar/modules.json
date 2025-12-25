@@ -1,4 +1,29 @@
 {
+    // -- Groups ------------------------------------
+    "group/hardware": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 300,
+            "children-class": "not-memory",
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/system",
+            "disk",
+            "cpu",
+            "memory"
+        ]
+    },
+    "group/stats": {
+        "orientation": "inherit",
+        "modules": [
+            "pulseaudio",
+            "battery", 
+            "hyprland/language"
+        ]
+    },
+
+    // -- Hyprland ----------------------------------
     "hyprland/workspaces": {
         "on-click": "activate",
         "active-only": false,
@@ -13,85 +38,24 @@
             "*": [1,2,3,4,5,6,7,8,9,10]
         }
     },
-    // Hyprland Window
-    "hyprland/window": {
-        "format": "{title}",
-        "max-length": 30,
-        "separate-outputs": true
-    },
-    // Empty
-    "custom/empty": {
-        "format": ""
-    },
-    // Empty
-    "custom/tools": {
-        "format": "",
-        "tooltip-format": "Tools"
-    },
-    // Keyboard State
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-    // System tray
-    "tray": {
-        "icon-size": 16,
-        "spacing": 10
-    },
-    // Clock
-    "clock": {
-        "format": "{:%Od.%Om %a | %H:%M}",
-        "timezone": "Europe/Moscow",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    },
     "hyprland/language": {
         "format": "{}",
         "format-en": "🇬🇧",
         "format-ru": "🇷🇺"
     },
-    // Group Hardware
-    "group/hardware": {
-        "orientation": "inherit",
-        "drawer": {
-            "transition-duration": 300,
-            "children-class": "not-memory",
-            "transition-left-to-right": false
-        },
-        "modules": [
-            "custom/system",
-            "disk",
-            "cpu",
-            "memory",
-            "hyprland/language"
-        ]
+
+    // -- System ------------------------------------
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+    "clock": {
+        "format": "{:%Od.%Om %a | %H:%M}",
+        "timezone": "Europe/Moscow",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     },
 
-    "group/stats": {
-        "orientation": "inherit",
-        "modules": [
-            "pulseaudio",
-            "battery", 
-            "hyprland/language"
-        ]
-    },
-    // Network
-    "network": {
-        "format": "{ifname}",
-        "format-wifi": "   {signalStrength}%",
-        "format-ethernet": "  {ifname}",
-        "format-disconnected": "Offline",
-        "tooltip-format": " {ifname} via {gwaddri}",
-        "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
-        "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
-        "tooltip-format-disconnected": "Disconnected",
-        "max-length": 50
-    },
-    // Battery
+    // -- Hardware ----------------------------------
     "battery": {
         "states": {
             // "good": 95,
@@ -112,7 +76,6 @@
             " "
         ]
     },
-    // Pulseaudio
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "🔈  {volume}%",
@@ -136,7 +99,19 @@
         },
         "on-click": "pavucontrol"
     },
-    // Bluetooth
+
+    // -- Connectivity ------------------------------
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "   {signalStrength}%",
+        "format-ethernet": "  {ifname}",
+        "format-disconnected": "Offline",
+        "tooltip-format": " {ifname} via {gwaddri}",
+        "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+        "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+    },
     "bluetooth": {
         "format": " {status}",
         "format-disabled": " {status}",
