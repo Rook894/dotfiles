@@ -57,9 +57,9 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}   {capacity}%",
-        "format-charging": "  {capacity}%",
-        "format-plugged": "  {capacity}%",
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
         "format-alt": "{icon}  {time}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
@@ -72,10 +72,10 @@
         ]
     },
     "pulseaudio": {
-    "format": "    {volume}%",
-    "format-bluetooth": "    {volume}%",
-    "format-muted": "    0%",
-    "format-source": "    {volume}%",
+    "format": "  {volume}%",
+    "format-bluetooth": "  {volume}%",
+    "format-muted": "  0%",
+    "format-source": "  {volume}%",
     "format-source-muted": "",
     "format-icons": {
         "default": [
@@ -98,7 +98,7 @@
     },
     "cpu": {
         "interval": 2,
-        "format": " {usage}%  ",
+        "format": " {usage}%",
         "max-length": 10
     },
 
