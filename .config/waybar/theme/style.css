@@ -46,23 +46,25 @@ window#waybar {
  * Workspaces 
  * ----------------------------------------------------- */
 
-#workspaces {
-    margin: 3px 7px 3px 3px;
+ #workspaces button {
+    background-color: @lighter-background;
+    box-shadow: inset 0 -3px transparent;
     color: @textcolor;
+    transition: all 0.2s ease;
+    border: none;
+    border-radius: 0;
+    padding: 0 4px;
 }
 
-#workspaces button {
-    padding:0px 3px;
-    border-radius: 25%;
-    color: @textcolor;
-    transition: all 0.5s ease-in-out;
+#workspaces button.empty {
+    background-color: transparent;
 }
 
-#workspaces button.active {
-    color: @textcolor;
-    background: @lighter-background;
+#workspaces button.active,
+#workspaces button.visible {
+    background-color: @lighter-background;
+    box-shadow: inset 0 -4px @textcolor;
 }
-
 
 /* -----------------------------------------------------
  * Tooltips
