@@ -30,10 +30,9 @@
     /* sudo pacman -Syu ttf-jetbrains-mono-nerd */
     font-family: "JetBrainsMono Nerd Font", "FiraCode Nerd Font", "Meslo Nerd Font", sans-serif;
     color: @textcolor;
-    border: none;
-    border-radius: 0px;
 }
 
+/* Main waybar */
 window#waybar {
     background-color: #1E2A33; 
     border-bottom: 0px solid #ffffff;
@@ -103,8 +102,6 @@ tooltip label {
 
 #pulseaudio {
     color: @textcolor;
-    border-radius: 15px;
-    margin: 0px 0px;
 }
 
 #pulseaudio.muted {
@@ -118,8 +115,6 @@ tooltip label {
 
 #battery {
     color: @textcolor;
-    border-radius: 15px;
-    margin: 0px 0px 0px 6px;
 }
 
 #battery.charging, #battery.plugged {
@@ -169,8 +164,9 @@ tooltip label {
     margin: 0px 4px;
 }
 
-#cpu, #memory, #disk {
+#cpu, #memory, #disk, #pulseaudio, #battery {
     min-width: 55px;
+    /* border: 1px solid red;  */
 }
 
 #tray {
@@ -179,6 +175,8 @@ tooltip label {
 
 #custom-separator {
     padding: 0;
-    margin: 0;
-    border-right: 2px solid alpha(@textcolor, 0.3);
+    margin-right: 10px;
+    color: transparent;
+    border-right: 1px solid alpha(@textcolor, 0.3);
+    min-height: 20px;
 }
