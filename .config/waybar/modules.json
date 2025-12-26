@@ -67,18 +67,18 @@
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": [
-            " ",
-            " ",
-            " ",
-            " ",
-            " "
+            "",
+            "",
+            "",
+            "",
+            ""
         ]
     },
     "pulseaudio": {
-    "format": "  {volume}%",
-    "format-bluetooth": "  {volume}%",
-    "format-muted": "  0%",
-    "format-source": "  {volume}%",
+    "format": " {volume}%",
+    "format-bluetooth": " {volume}%",
+    "format-muted": " 0%",
+    "format-source": " {volume}%",
     "format-source-muted": "",
     "format-icons": {
         "default": [
@@ -91,7 +91,7 @@
     },
     "disk": {
         "interval": 120,
-        "format": "🖴 {percentage_used}% ",
+        "format": "🖴 {percentage_used}%",
         "path": "/",
         "unit": "GB",
         "tooltip": true,
@@ -99,7 +99,7 @@
     },
     "memory": {
         "interval": 30,
-        "format": " {percentage}% ",
+        "format": " {percentage}%",
         "max-length": 10,
         "tooltip": true,
         "tooltip-format": "Memory usage:\nRAM: {used:0.1f}/{total} GiB\nSWAP: {swapUsed:0.1f}/{swapTotal} GiB"

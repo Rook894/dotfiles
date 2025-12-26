@@ -165,8 +165,12 @@ tooltip label {
  * Other
  * ----------------------------------------------------- */
 
-#tray, #stats, #clock, #workspaces {
+#tray, #clock, #workspaces {
     margin: 0px 4px;
+}
+
+#cpu, #memory, #disk {
+    min-width: 55px;
 }
 
 #tray {
