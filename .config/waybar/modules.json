@@ -38,8 +38,8 @@
     },
     "hyprland/language": {
         "format": "{}",
-        "format-en": "🇬🇧",
-        "format-ru": "🇷🇺"
+        "format-en": "EN",
+        "format-ru": "RU"
     },
 
     // -- System ------------------------------------
@@ -75,7 +75,7 @@
         ]
     },
     "pulseaudio": {
-    "format": " {volume}%",
+    "format": "󰓃 {volume}%",
     "format-bluetooth": "󰂰 {volume}%",
     "format-muted": "󰝟",
     "format-source": " {volume}%",
@@ -91,7 +91,7 @@
     },
     "disk": {
         "interval": 120,
-        "format": "🖴 {percentage_used}%",
+        "format": " {percentage_used}%",
         "path": "/",
         "unit": "GB",
         "tooltip": true,
