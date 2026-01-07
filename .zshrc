@@ -24,12 +24,13 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(fzf --zsh)"
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/base.toml)"
 
-# SSH keys for GNOME Keyring
+# GNOME Keyring SSH Agent
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
+
+# Auto-add all SSH keys (GNOME Keyring will prompt for passphrases, then remember them)
 if [ -S "$SSH_AUTH_SOCK" ]; then
     ssh-add -A 2>/dev/null
-fi
-
+fihjk
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
