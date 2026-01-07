@@ -30,7 +30,7 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
 # Auto-add all SSH keys (GNOME Keyring will prompt for passphrases, then remember them)
 if [ -S "$SSH_AUTH_SOCK" ]; then
     ssh-add -A 2>/dev/null
-fihjk
+fi
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
