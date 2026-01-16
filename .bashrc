@@ -17,5 +17,12 @@ parse_git_branch() {
     git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
+# Different prompt character in containers
+if [ -n "$CONTAINER_ID" ]; then
+    PROMPT_CHAR="»"
+else
+    PROMPT_CHAR=">"
+fi
+
 # Can add \n to make double line prompt.
-PS1="\[\e[1;34m\]\u\[\e[0;32m\]@\h:\[\e[0;36m\]\w\[\e[0m\]\[\e[0;33m\]\$(parse_git_branch)\[\e[0m\]> "
+PS1="\[\e[1;34m\]\u\[\e[0;32m\]@\h:\[\e[0;36m\]\w\[\e[0m\]\[\e[0;33m\]\$(parse_git_branch)\[\e[0m\]${PROMPT_CHAR} "
