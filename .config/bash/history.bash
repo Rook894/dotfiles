@@ -1,0 +1,5 @@
+# History
+HISTSIZE=5000
+HISTFILE=~/.bash_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase

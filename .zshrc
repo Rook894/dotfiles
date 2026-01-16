@@ -22,7 +22,6 @@ source $HOME/.config/zsh/history.zsh
 
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(fzf --zsh)"
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/base.toml)"
 
 # GNOME Keyring SSH Agent
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"

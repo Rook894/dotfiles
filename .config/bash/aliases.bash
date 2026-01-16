@@ -1,11 +1,9 @@
 
-alias ls='lsd'
 alias ..='cd ..'
 alias rm='rm -i'
-alias sz='source ~/.zshrc'
+alias sb='source ~/.bashrc'
 alias c='clear'
 alias ipconfig='ip addr show'
-alias cat='bat --paging=never --style=plain'
 
 alias gs='git status'
 alias ga='git add'
