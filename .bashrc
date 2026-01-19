@@ -19,6 +19,9 @@ if [ -S "$SSH_AUTH_SOCK" ]; then
     ssh-add -A 2>/dev/null
 fi
 
+export EDITOR=nvim
+
+
 
 parse_git_branch() {
     git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
