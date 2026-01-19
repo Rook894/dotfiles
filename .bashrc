@@ -11,6 +11,13 @@ for config in ~/.config/bash/*.bash; do
     [[ -f "$config" ]] && source "$config"
 done
 
+# GNOME Keyring SSH Agent (gcr-ssh-agent)
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
+
+# Auto-add all SSH keys (GNOME Keyring will prompt for passphrases, then remember them)
+if [ -S "$SSH_AUTH_SOCK" ]; then
+    ssh-add -A 2>/dev/null
+fi
 
 
 parse_git_branch() {
