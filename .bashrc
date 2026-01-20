@@ -20,8 +20,10 @@ if [ -S "$SSH_AUTH_SOCK" ]; then
 fi
 
 export EDITOR=nvim
+export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
+export DOCKER_PATH=podman
 
-
+export PATH="$HOME/.local/bin:$PATH"
 
 parse_git_branch() {
     git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
