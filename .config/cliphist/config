@@ -1,0 +1,4 @@
+max-items 300
+max-dedupe-search 100
+min-store-length 15
+preview-width 100
