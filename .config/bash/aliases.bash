@@ -13,22 +13,7 @@ alias ll='ls -Fls'
 
 alias db='distrobox'
 
-alias gs='git status'
-alias ga='git add'
-alias gc='git commit'
-alias gca='git commit -am'
-alias gp='git push'
-alias gpl='git pull'
-alias gd='git diff'
-alias gb='git branch'
-alias gco='git checkout'
 
-alias py='python3'
-alias pipup='pip install --upgrade pip'
-alias mkenv='python3 -m venv venv'
-alias avenv='source venv/bin/activate'
-alias djrun='python manage.py runserver'
-alias djmigrate='python manage.py migrate'
 
 s () {
   local server
