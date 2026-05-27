@@ -52,6 +52,9 @@
         "format": "{:%Od.%Om %a | %H:%M}",
         "timezone": "Europe/Moscow",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "iso8601": true              // weeks start on Monday
+        }
     },
 
     // -- Hardware ----------------------------------
