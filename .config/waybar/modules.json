@@ -15,6 +15,7 @@
         "modules": [
             "pulseaudio",
             "battery", 
+            "custom/tlp",
             "custom/separator",
             "hyprland/language",
             "custom/separator"
@@ -73,6 +74,13 @@
             "",
             ""  // High
         ]
+    },
+    "custom/tlp": {
+        "exec": "~/.config/hypr/scripts/tlp-profile.sh",
+        "interval": 5,
+        "on-click": "~/.config/hypr/scripts/tlp-profile.sh toggle",
+        "exec-on-event": true,
+        "tooltip": false
     },
     "pulseaudio": {
     "format": "󰓃 {volume}%",
