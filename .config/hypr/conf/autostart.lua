@@ -1,0 +1,16 @@
+-- Autostart
+
+hl.on("hyprland.start", function ()
+    hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+    hl.exec_cmd("systemctl --user start hyprpolkitagent")
+    -- hl.exec_cmd("gnome-keyring-daemon --start --components=pkcs11,secrets,ssh")
+    -- hl.exec_cmd("dunst")
+    -- hl.exec_cmd("hypridle")
+    -- hl.exec_cmd("hyprpaper")
+    -- hl.exec_cmd("~/.config/waybar/launch.sh")
+    -- hl.exec_cmd("wl-paste --type text --watch cliphist store")
+    -- hl.exec_cmd("wl-paste --type image --watch cliphist store")
+    -- hl.exec_cmd("blueman-applet & iwgtk -i & pcloud")
+    -- hl.exec_cmd("betterbird & Telegram & vesktop & obsidian")
+    -- hl.exec_cmd("hyprctl setcursor phinger-cursors-light 24")
+end)
