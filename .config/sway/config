@@ -94,6 +94,8 @@ input "1739:0:Synaptics_TM3276-022" {
 default_border pixel 1
 default_floating_border pixel 1
 
+# Hide borders and gaps when there's only one window
+smart_borders no_gaps
 
 
 
