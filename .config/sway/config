@@ -95,8 +95,14 @@ default_border pixel 1
 default_floating_border pixel 1
 
 
+
+
 ### Key bindings
 #
+# Start programs:
+bindsym $mod+b exec firefox
+bindsym $mod+Shift+b exec firefox --private-window
+
 # Basics:
 #
     # Start a terminal
@@ -177,7 +183,7 @@ default_floating_border pixel 1
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
+    bindsym $mod+c splith
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
