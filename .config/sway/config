@@ -104,7 +104,10 @@ exec_always {
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 }
 
-
+# Waybar
+# Waybar is launched using systemd
+# systemctl --user enable --now waybar.service
+exec_always systemctl --user restart waybar.service
 
 ### Key bindings
 #
