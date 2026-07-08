@@ -113,6 +113,11 @@ exec_always systemctl --user restart waybar.service
 bindsym $mod+b exec firefox
 bindsym $mod+Shift+b exec firefox --private-window
 
+
+# Lock screen
+bindsym $mod+Escape exec swaylock -f -c 000000
+
+
 # Media button:
 #
 # Media buttons
