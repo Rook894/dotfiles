@@ -179,6 +179,12 @@ set $mediaPositionStep 5
     # $bind $mod+Shift+Down move down
     # $bind $mod+Shift+Up move up
     # $bind $mod+Shift+Right move right
+
+    # Resize the focused window
+    $bind $mod+Ctrl+h resize grow width 20px
+    $bind $mod+Ctrl+l resize shrink width 20px
+    $bind $mod+Ctrl+k resize shrink height 20px
+    $bind $mod+Ctrl+j resize grow height 20px
 #
 # Workspaces:
 #
