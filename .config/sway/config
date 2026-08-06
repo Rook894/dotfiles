@@ -109,13 +109,16 @@ exec_always systemctl --user restart waybar.service
 
 ### Key bindings
 #
+# Ignore layout, resolving by physical key position
+set $bind bindsym --to-code
+
 # Start programs:
-bindsym $mod+b exec firefox
-bindsym $mod+Shift+b exec firefox --private-window
+$bind $mod+b exec firefox
+$bind $mod+Shift+b exec firefox --private-window
 
 
 # Lock screen
-bindsym $mod+Escape exec swaylock -f -c 000000
+$bind $mod+Escape exec swaylock -f -c 000000
 
 
 # Media button:
@@ -123,22 +126,22 @@ bindsym $mod+Escape exec swaylock -f -c 000000
 # Media buttons
 set $mediaPositionStep 5
 
-    bindsym $mod+Left exec playerctl previous
-    bindsym $mod+Shift+Left exec playerctl position $mediaPositionStep-
-    bindsym $mod+Down exec playerctl play-pause
-    bindsym $mod+Right exec playerctl next 
-    bindsym $mod+Shift+Right exec playerctl position $mediaPositionStep+
+    $bind $mod+Left exec playerctl previous
+    $bind $mod+Shift+Left exec playerctl position $mediaPositionStep-
+    $bind $mod+Down exec playerctl play-pause
+    $bind $mod+Right exec playerctl next 
+    $bind $mod+Shift+Right exec playerctl position $mediaPositionStep+
 
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec $term
+    $bind $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    $bind $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    $bind $mod+d exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -148,59 +151,59 @@ set $mediaPositionStep 5
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    $bind $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    $bind $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
     # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
+    $bind $mod+$left focus left
+    $bind $mod+$down focus down
+    $bind $mod+$up focus up
+    $bind $mod+$right focus right
     # Or use $mod+[up|down|left|right] (Don't)
-    # bindsym $mod+Left focus left
-    # bindsym $mod+Down focus down
-    # bindsym $mod+Up focus up
-    # bindsym $mod+Right focus right
+    # $bind $mod+Left focus left
+    # $bind $mod+Down focus down
+    # $bind $mod+Up focus up
+    # $bind $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
+    $bind $mod+Shift+$left move left
+    $bind $mod+Shift+$down move down
+    $bind $mod+Shift+$up move up
+    $bind $mod+Shift+$right move right
     # Ditto, with arrow keys (Don't)
-    # bindsym $mod+Shift+Left move left
-    # bindsym $mod+Shift+Down move down
-    # bindsym $mod+Shift+Up move up
-    # bindsym $mod+Shift+Right move right
+    # $bind $mod+Shift+Left move left
+    # $bind $mod+Shift+Down move down
+    # $bind $mod+Shift+Up move up
+    # $bind $mod+Shift+Right move right
 #
 # Workspaces:
 #
     # Switch to workspace
-    bindsym $mod+1 workspace number 1
-    bindsym $mod+2 workspace number 2
-    bindsym $mod+3 workspace number 3
-    bindsym $mod+4 workspace number 4
-    bindsym $mod+5 workspace number 5
-    bindsym $mod+6 workspace number 6
-    bindsym $mod+7 workspace number 7
-    bindsym $mod+8 workspace number 8
-    bindsym $mod+9 workspace number 9
-    bindsym $mod+0 workspace number 10
+    $bind $mod+1 workspace number 1
+    $bind $mod+2 workspace number 2
+    $bind $mod+3 workspace number 3
+    $bind $mod+4 workspace number 4
+    $bind $mod+5 workspace number 5
+    $bind $mod+6 workspace number 6
+    $bind $mod+7 workspace number 7
+    $bind $mod+8 workspace number 8
+    $bind $mod+9 workspace number 9
+    $bind $mod+0 workspace number 10
     # Move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace number 1
-    bindsym $mod+Shift+2 move container to workspace number 2
-    bindsym $mod+Shift+3 move container to workspace number 3
-    bindsym $mod+Shift+4 move container to workspace number 4
-    bindsym $mod+Shift+5 move container to workspace number 5
-    bindsym $mod+Shift+6 move container to workspace number 6
-    bindsym $mod+Shift+7 move container to workspace number 7
-    bindsym $mod+Shift+8 move container to workspace number 8
-    bindsym $mod+Shift+9 move container to workspace number 9
-    bindsym $mod+Shift+0 move container to workspace number 10
+    $bind $mod+Shift+1 move container to workspace number 1
+    $bind $mod+Shift+2 move container to workspace number 2
+    $bind $mod+Shift+3 move container to workspace number 3
+    $bind $mod+Shift+4 move container to workspace number 4
+    $bind $mod+Shift+5 move container to workspace number 5
+    $bind $mod+Shift+6 move container to workspace number 6
+    $bind $mod+Shift+7 move container to workspace number 7
+    $bind $mod+Shift+8 move container to workspace number 8
+    $bind $mod+Shift+9 move container to workspace number 9
+    $bind $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #
@@ -209,25 +212,25 @@ set $mediaPositionStep 5
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+c splith
-    bindsym $mod+v splitv
+    $bind $mod+c splith
+    $bind $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    $bind $mod+s layout stacking
+    $bind $mod+w layout tabbed
+    $bind $mod+e layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
+    $bind $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
+    $bind $mod+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    $bind $mod+space focus mode_toggle
 
     # Move focus to the parent container
-    bindsym $mod+a focus parent
+    $bind $mod+a focus parent
 #
 # Scratchpad:
 #
@@ -235,11 +238,11 @@ set $mediaPositionStep 5
     # You can send windows there and get them back later.
 
     # Move the currently focused window to the scratchpad
-    bindsym $mod+Shift+minus move scratchpad
+    $bind $mod+Shift+minus move scratchpad
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+minus scratchpad show
+    $bind $mod+minus scratchpad show
 #
 # Resizing containers:
 #
@@ -248,22 +251,22 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+    $bind $left resize shrink width 10px
+    $bind $down resize grow height 10px
+    $bind $up resize shrink height 10px
+    $bind $right resize grow width 10px
 
     # Ditto, with arrow keys
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
+    $bind Left resize shrink width 10px
+    $bind Down resize grow height 10px
+    $bind Up resize shrink height 10px
+    $bind Right resize grow width 10px
 
     # Return to default mode
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+    $bind Return mode "default"
+    $bind Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+$bind $mod+r mode "resize"
 
 # Include configs from 3 locations:
 #  - /usr/share/sway/config.d
