@@ -13,7 +13,8 @@
     ],
 
     "modules-left": [
-        "sway/workspaces"
+        "sway/workspaces",
+        "sway/mode"
     ],
 
     "modules-center": [

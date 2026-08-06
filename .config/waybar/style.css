@@ -96,6 +96,13 @@ tooltip label {
     margin-right: 0;
 }
 
+#mode {
+    background-color: #e33400;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0 10px;
+    border-radius: 4px;
+}
 
 /* -----------------------------------------------------
  * Pulseaudio
