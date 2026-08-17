@@ -107,6 +107,16 @@ exec_always {
 # systemctl --user enable --now waybar.service
 exec_always systemctl --user restart waybar.service
 
+
+### Window rules
+# Use
+# swaymsg -t get_tree
+# to get a list of windows
+
+for_window [app_id="qalculate-gtk"] floating enable
+for_window [app_id="thunar" title="File Operation Progress"] floating enable, resize set 500 200, move position 20 20
+for_window [app_id="firefox" title="Picture-in-Picture"] floating enable, sticky enable
+
 ### Key bindings
 #
 # Ignore layout, resolving by physical key position
