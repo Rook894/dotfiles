@@ -126,6 +126,10 @@ set $bind bindsym --to-code
 $bind $mod+b exec firefox
 $bind $mod+Shift+b exec firefox --private-window
 
+# Utilities:
+$bind $mod+Shift+x exec grimpicker -cd
+$bind $mod+Shift+s exec grimshot copy area
+$bind Shift+Print exec grimshot copy screen
 
 # Lock screen
 $bind $mod+Escape exec swaylock -f -c 000000
