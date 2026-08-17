@@ -7,7 +7,6 @@ alias cpp='rsync --info=progress2'
 alias sb='source ~/.bashrc'
 alias c='clear'
 alias ipconfig='ip addr show'
-alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {l}' --preview-window=right:60% | xargs -ro yay -S"
 
 alias ll='ls -Fls'
 
