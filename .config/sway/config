@@ -123,8 +123,8 @@ for_window [app_id="firefox" title="Picture-in-Picture"] floating enable, sticky
 set $bind bindsym --to-code
 
 # Start programs:
-$bind $mod+b exec firefox
-$bind $mod+Shift+b exec firefox --private-window
+$bind $mod+m exec firefox
+$bind $mod+Shift+m exec firefox --private-window
 
 # Utilities:
 $bind $mod+Shift+x exec grimpicker -cd
@@ -232,7 +232,7 @@ set $mediaPositionStep 5
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    $bind $mod+c splith
+    $bind $mod+b splith
     $bind $mod+v splitv
 
     # Switch the current container between different layout styles
