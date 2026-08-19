@@ -5,7 +5,7 @@
 # Read `man 5 sway` for a complete reference.
 
 # pip install autotiling
-exec ~/.local/bin/autotiling
+# exec_always ~/.local/bin/autotiling --limit 2
 
 ### Variables
 #
