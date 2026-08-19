@@ -83,11 +83,11 @@
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": [
-            "", // Low
-            "",
-            "",
-            "",
-            ""  // High
+            "󰁺", // Low
+            "󰁼",
+            "󰁾",
+            "󰂀",
+            "󰁹"  // High
         ]
     },
     "custom/tlp": {
@@ -122,14 +122,14 @@
     },
     "memory": {
         "interval": 30,
-        "format": " {percentage}%",
+        "format": " {percentage}%",
         "max-length": 10,
         "tooltip": true,
         "tooltip-format": "Memory usage:\nRAM: {used:0.1f}/{total} GiB\nSWAP: {swapUsed:0.1f}/{swapTotal} GiB"
     },
     "cpu": {
         "interval": 2,
-        "format": " {usage}%",
+        "format": " {usage}%",
         "max-length": 10
     },
 

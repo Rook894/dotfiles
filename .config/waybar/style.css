@@ -27,8 +27,8 @@
  * ----------------------------------------------------- */
 
 * {
-    /* sudo pacman -Syu ttf-jetbrains-mono-nerd */
-    font-family: "JetBrainsMono Nerd Font", "FiraCode Nerd Font", "Meslo Nerd Font", sans-serif;
+    /* sudo dnf install cascadia-mono-nf-fonts */
+    font-family: "Cascadia Mono NF Light", sans-serif;
     color: @textcolor;
     font-size: 12px;
 }
